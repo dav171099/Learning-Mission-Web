@@ -353,6 +353,15 @@
                 </p>
             </div>
             <form action="" class="contacts_form">
+
+
+                <!-- Hidden Required Fields -->
+                <input type="hidden" name="project_name" value="Learning Mission Web">
+                <input type="hidden" name="admin_email" value="david171099@gmail.com">
+                <input type="hidden" name="form_subject" value="Contact Form">
+                <!-- END Hidden Required Fields -->
+
+
                 <div class="contacts_input">
                 <input class="contacts_email" type="email" name="email" id="email" placeholder="E-mail">
                 <input class="contacts_full_name" type="text" name="full_name" id="full_name" placeholder="Full name">
@@ -361,7 +370,7 @@
                 <textarea class="contacts_message" name="message" id="message">Message...</textarea>
                 </div>
                 <div class="contacts_send">
-                    <button type="submit" class="contacts_button">SEND</button>
+                    <button type="submit" value="SEND" class="contacts_button">SEND</button>
                 </div>
             </form>
         </div>
@@ -421,5 +430,6 @@
 
 
     <script src="./js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </body>
 </html>
