@@ -1,0 +1,1633 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0-modified | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* make sure to set some focus styles for accessibility */
+:focus {
+    outline: 0;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+body {
+	line-height: 1;
+}
+
+ol, ul {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+input[type=search]::-webkit-search-cancel-button,
+input[type=search]::-webkit-search-decoration,
+input[type=search]::-webkit-search-results-button,
+input[type=search]::-webkit-search-results-decoration {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+input[type=search] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -webkit-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+textarea {
+    overflow: auto;
+    vertical-align: top;
+    resize: vertical;
+}
+
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+
+audio,
+canvas,
+video {
+    display: inline-block;
+    *display: inline;
+    *zoom: 1;
+    max-width: 100%;
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+    display: none;
+    height: 0;
+}
+
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+
+[hidden] {
+    display: none;
+}
+
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+html {
+    font-size: 100%; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+
+a:focus {
+    outline: thin dotted;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+    outline: 0;
+}
+
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+
+img {
+    border: 0; /* 1 */
+    -ms-interpolation-mode: bicubic; /* 2 */
+}
+
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+
+figure {
+    margin: 0;
+}
+
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+
+form {
+    margin: 0;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+    border: 1px solid #c0c0c0;
+    margin: 0 2px;
+    padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+
+legend {
+    border: 0; /* 1 */
+    padding: 0;
+    white-space: normal; /* 2 */
+    *margin-left: -7px; /* 3 */
+}
+
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+
+button,
+input,
+select,
+textarea {
+    font-size: 100%; /* 1 */
+    margin: 0; /* 2 */
+    vertical-align: baseline; /* 3 */
+    *vertical-align: middle; /* 3 */
+}
+
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+button,
+input {
+    line-height: normal;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+
+button,
+select {
+    text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+    -webkit-appearance: button; /* 2 */
+    cursor: pointer; /* 3 */
+    *overflow: visible;  /* 4 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+    cursor: default;
+}
+
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box; /* 1 */
+    padding: 0; /* 2 */
+    *height: 13px; /* 3 */
+    *width: 13px; /* 3 */
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+    -webkit-appearance: textfield; /* 1 */
+    -webkit-box-sizing: content-box; /* 2 */
+    box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+    -webkit-appearance: none;
+}
+
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+
+textarea {
+    overflow: auto; /* 1 */
+    vertical-align: top; /* 2 */
+}
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.chromeframe {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+
+
+
+/* lato-regular - latin */
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+         url('../fonts/lato-v17-latin-regular.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v17-latin-regular.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-700 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local(''),
+         url('../fonts/lato-v17-latin-700.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v17-latin-700.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  /* lato-900 - latin */
+  @font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: local(''),
+         url('../fonts/lato-v17-latin-900.woff2') format('woff2'), /* Chrome 26+, Opera 23+, Firefox 39+ */
+         url('../fonts/lato-v17-latin-900.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
+  }
+  
+  html{
+      -webkit-box-sizing: border-box;
+              box-sizing: border-box;
+  }
+  *, *::before, *::after {
+      -webkit-box-sizing: inherit;
+              box-sizing: inherit;
+  }
+  body{
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-size: 18px;
+    line-height: 18px;
+    font-weight: normal;
+    color: #102746;
+  }
+  img{
+      max-width: 100%;
+      height: auto;
+  }
+.container{
+    max-width: 1920px;
+    width: 100%;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+}
+
+/*Header style start*/
+.header{
+    position: sticky;
+    width: 100%;
+    min-height: 60px;
+    top: 0;
+    left: 0;
+    z-index: 999;
+}
+.container_nav{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    height: 87px;
+    gap: 0;
+}
+.nav__list_active{
+    max-width: 61%;
+    width: 100%;
+}
+.header_active{
+    text-align: center;
+    justify-content: space-around;
+    top: 0;
+    background: #375b75;
+    opacity: 0.9;
+}
+.header_nav{
+    height: 87px;
+    margin-left: 15%;
+}
+.header_menu{
+    height: 87px;
+    display: flex;
+    max-width: 100%;
+    grid-column: span 11;
+    background: #375b75;
+}
+.header_menu_logo{
+    margin: 30px 0px 25px 80px;
+}
+.nav_ul{
+    float: right;
+    margin-right: 10%;
+    display: flex;
+    flex-wrap: nowrap;
+}
+.nav_li{
+    margin: 36px 65px 25px 0;
+    transition: .1s all;
+}
+.nav_link{
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    line-height: 18px;
+    text-align: left;
+    color: #fff;
+    transition: .2s initial;
+}
+.nav_link:hover{
+    color: #f7941d;
+    
+}
+.nav_li:hover{
+    transform: scale(1.1);
+}
+.header__burger{
+    display: none;
+    width: 40px;
+    height: 28px;
+    position: relative;
+}
+.burger__line{
+    display: block;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    left: 0;
+}
+.buerger__line_first{
+    top: 0;
+}
+.buerger__line_second{
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+}
+.buerger__line_third{
+    bottom: 0;
+}
+.header_right_block{
+    width: 100%;
+    top: 0;
+    right: 0;
+    grid-column: span 1;
+    background: #f7941d;
+    text-align: center;
+}
+.user_img{
+    margin-top: 30px;
+    max-width: 40px;
+    transition: .2s all;
+}
+.user_img:hover{
+    transform: scale(1.2);
+}
+
+/*Header style end*/
+
+
+/*Intro style start*/
+
+.intro{
+    height: 1006px;
+    background: url(../img/banner.jpg) no-repeat center;
+    background-size: cover;
+}
+.intro_content{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 0;
+    
+}
+.intro_title{
+    max-width: 1920px;
+    grid-column: span 11;
+    margin: 118px 0 0 73px;
+    position: relative;
+}
+.intro_title_pic{
+    max-width: 980px;
+    margin-bottom: 30px;
+}
+.intro_logo{
+    max-width: 980px;
+}
+.intro_right_block{
+    grid-column: span 1;
+    width: 100%;
+    height: 1006px;
+    text-align: center;
+    background-color: rgb(237, 240, 248, 0.41);
+    position: relative;
+}
+.intro_title_text{
+    margin-left: 150px;
+    width: 619px;
+}
+.title_text{
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 38.4px;
+    text-align: left;
+    color: #fff;
+    margin-bottom: 94px;
+}
+.intro_button_1{
+    width: 224.58px;
+    height: 72px;
+    background: #f7941d;
+    border: none;
+    font-weight: normal;
+    font-size: 22.51px;
+    text-align: left;
+    line-height: 5.14px;
+    color: #fff;
+    margin-right: 37px;
+    transition: .2s all;
+}
+.donate_pic{
+    margin: 0 26px;
+}
+.intro_title_button{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 150px;
+}
+.intro_button_1:hover {
+    transform: scale(1.1);
+}
+.intro_button_2:hover {
+    transform: scale(1.1);
+}
+.intro_button_2{
+    width: 224.58px;
+    height: 72px;
+    background: #fff;
+    border: none;
+    font-weight: normal;
+    font-size: 22.51px;
+    text-align: center;
+    line-height: 5.14px;
+    color: #f7941d;
+    transition: .2s all;
+}
+.intro_emil_form{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 26px;
+}
+.email_input{
+    
+    width: 632px;
+    height: 72px;
+    background: #edf0f8;
+    border: none;
+}
+.email_input::placeholder{
+    padding-left: 20px;
+    color: #28292b;
+    font-size: 22px;
+    line-height: 26.4px;
+}
+.intro_right{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 391px;
+}
+.right_button_join{
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+    margin-bottom: 26px;
+}
+.right_join{
+    height: 72px;
+    width: 100%;
+    border: none;
+    background: #28292b;
+    font-size: 26px;
+    line-height: 31.2px;
+    color: #edf0f8;
+}
+/*Intro style end*/
+
+/*Mission Style Start*/
+
+.mission{
+    max-width: 100%;
+    margin: 77px 0 130px 270px;
+    background: transparent;
+    position: relative;
+}
+.mission_info{
+    width: 830px;
+    margin-bottom: 25px;
+}
+.mission_title_info{
+    margin-bottom: 33px;
+}
+.mission_title{
+    font-size: 42px;
+    line-height: 5.14px;
+    text-align: left;
+    color: #28292b;
+    font-weight: normal;
+}
+.mission_text{
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 36px;
+    text-align: left;
+    color: #28292b;
+    margin-bottom: 20px;
+}
+.mission_link{
+    text-decoration: underline;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 36px;
+    text-align: left;
+    color: #28292b;
+}
+.mission_content_video{
+    width: 845px;
+    height: 578px;
+    background: #edf0f8;
+    box-shadow: 0px 0px 40px rgba(14, 15, 15, 0.15);
+}
+.mission_wrapper{
+    padding: 47px 41px;
+}
+.mission_content_title_text{
+    width: 636px;
+    margin-bottom: 24px;
+}
+.mission_content_title{
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 5.14px;
+    text-align: left;
+    color: #28292b;
+    margin-bottom: 24px;
+}
+.mission_content_text{
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21.6px;
+    text-align: left;
+    color: #28292b;
+}
+.mission_videos{
+    width: 100%;
+    height: 100%;
+    margin-bottom: 130px;
+    
+}
+.videos_wrapper{
+    max-width: 750px;
+    margin: 0 auto;
+    position: relative;
+}
+.video_item{
+    padding-top: 56.25%;
+}
+.videos__element{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.mission_youtube{
+    position: absolute;
+    bottom: 0;
+    right: 5%;
+}
+.youtube_text{
+    text-decoration: underline;
+    font-size: 24px;
+    font-weight: normal;
+    line-height: 28.8px;
+    text-align: left;
+    color: #0d141d;
+}
+/*Mission Style End*/
+
+/*Donate style start*/
+
+.donate{
+    max-width: 100%;
+    height: 845px;
+    background: #d8dee7;
+    position: relative;
+    margin-bottom: 80px;
+}
+.donate_wrapper{
+    max-width: 100%;
+    margin: 0 auto;
+}
+.donate_title_text{
+    max-width: 100%;
+    text-align: center;
+    padding: 80px 0 65px 0;
+    margin-bottom: 20px;
+    
+}
+.donate_title{
+    font-weight: normal;
+    font-size: 38px;
+    line-height: 5.14px;
+    color: #28292b;
+    margin-bottom: 20px;
+}
+.donate_text{
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 36px;
+    color: #28292b;
+}
+
+.donate_email{
+    width: 446px;
+    height: 72px;
+    background: #fff;
+    border: none;
+}
+.donate_email::placeholder{
+    font-weight: normal;
+    font-size: 22px;
+    padding-left: 10px;
+    line-height: 26.4px;
+    color: #28292b;
+}
+.donate_email:hover{
+    transform: scale(1.1);
+}
+.donate_email_button{
+    width: 190px;
+    height: 72px;
+    background: #f7941d;
+    color: white;
+    border: none;
+    transition: .2s;
+}
+.donate_email_button:hover{
+    transform: scale(1.1);
+}
+.donate_checked{
+    margin-bottom: 56px;
+}
+.donate_form_checkbox{
+    display: block;
+    margin-left: 25%;
+}
+.donate_form{
+    margin-bottom: 40px;
+}
+.checkbox{
+    display: none;
+}
+.fake{
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    margin-right: 10px;
+    border: 1px solid white;
+    border-radius: 5px;
+    background-color: white;
+    position: relative;
+}
+.fake::before{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: block;
+    width: 90%;
+    height: 90%;
+    background: url(../img/checkmark.png);
+    opacity: 0;
+    transition: .2s;
+}
+.checkbox:checked + .fake::before {
+    opacity: 1;
+}
+.label_usd{
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 26.4px;
+    text-align: left;
+    color: #28292b;
+    margin-right: 20px;
+}
+.label_amd{
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 26.4px;
+    text-align: left;
+    color: #28292b;
+}
+
+.choose_method{
+    display: flex;
+    width: 654px;
+    height: 72px;
+    background: #fff;
+    margin-bottom: 55px;
+}
+.choose_donat{
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+.choose_title{
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26.4px;
+    text-align: left;
+    color: #28292b;
+}
+.choose_ico{
+    margin: 10px 20px;
+}
+.choose_ico:first-child:hover{
+    margin-left: 0;
+}
+.choose_link:hover{
+    padding: 24px 20px 29px 20px;
+    border-radius: 5px;
+    background: #f7941d;
+}
+/*Donate style end*/
+
+
+/*Activities style start*/
+
+.activities{
+    margin: 0 auto;
+}
+.activities_title_text{
+    text-align: center;
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 5.14px;
+    color: #28292b;
+}
+.activities_title{
+    margin-bottom: 30px;
+}
+.activities_wrapper{
+    max-width: 1470px;
+}
+.activities_info{
+    margin-left: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+.activities_upcoming{
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: left;
+    color: #28292b;
+    margin-right: 70px;
+}
+.activities_past{
+    font-weight: normal;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: left;
+    color: #28292b;
+}
+.active{
+    border-bottom: 5px solid #f7941d;
+}
+.activities_upcoming:hover,
+.activities_past:hover{
+    border-bottom: 5px solid #f7941d;
+}
+.activities_cards{
+    margin: 0 200px 50px 200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 65px;
+}
+.activities_card{
+    grid-column: span 1;
+    background: #d8dee7;
+    position: relative;
+}
+.card_img{
+    margin-bottom: 30px;
+}
+.card_title{
+    margin: 0 80px 30px 40px;
+}
+.activities_card_title_1{
+    margin-bottom: 30px;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16.8px;
+    text-align: left;
+    color: #2b2a29;
+}
+.activities_card_title_2{
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 28.76px;
+    text-align: left;
+    color: #060606;
+    margin-bottom: 10px;
+}
+.activities_card_title_3{
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    text-align: left;
+    color: #2b2a29;
+    margin-bottom: 10px;
+}
+.activities_border{
+    position: absolute;
+    right: 0;
+    width: 135px;
+    height: 135px;
+    background: #f7941d;
+    border-radius: 50%;
+    transform: translateY( -100px);
+}
+.border_text{
+    padding: 25px;
+    text-align: center;
+    font-weight: normal;
+    font-size: 40px;
+    line-height: 36px;
+    color: #fff;
+
+}
+.activities_more{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.title_more{
+    font-weight: normal;
+    text-decoration: underline;
+    font-size: 22px;
+    line-height: 36px;
+    text-align: left;
+    color: #28292b;
+}
+
+/*Activities style end*/
+
+
+/*Testimonials style start*/
+.testimonials_title{
+    text-align: center;
+    margin-bottom: 50px;
+}
+.testimonials_title_1{
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 5.14px;
+    color: #28292b;
+}
+.testimonials_cards{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    column-gap: 20%;
+    margin: 0 10% 100px 10%;
+}
+.testimonials_card{
+    text-align: center;
+    grid-column: span 3;
+}
+.testimonials_card_title_2{
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 36px;
+    color: #060606;
+}
+
+.testimonials_card_title_3{
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 36px;
+    color: #060606;
+    margin-bottom: 10px;
+}
+.testimonials_card_text{
+    max-width: 100%;
+    text-align: center;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #2b2a29;
+    margin-bottom: 20px;
+
+}
+.testimonials_card_pic{
+    display: flex;
+    position: relative;
+}
+.testimonials_youtube{
+    position: absolute;
+    bottom: 0;
+    right: -10%;
+    transition: .2s;
+}
+.testimonials_youtube:hover{
+    transform: scale(1.2);
+}
+.testimonials__show_more{
+    text-align: center;
+    margin-bottom: 70px;
+}
+.testimonials_more_link{
+    font-weight: normal;
+    text-decoration: underline;
+    font-size: 22px;
+    line-height: 36px;
+    color: #28292b;
+}
+
+/*Testimonials style end*/
+
+
+/*Contacts style start*/
+
+.contacts_title_text{
+    text-align: center;
+    margin: 0 auto;
+    margin-bottom: 70px;
+}
+.contacts_title{
+    font-weight: normal;
+    font-size: 42px;
+    line-height: 5.14px;
+    color: #28292b;
+    margin-bottom: 25px;
+}
+.contacts_text{
+    width: 50%;
+    margin: 0 auto;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26.4px;
+    color: #28292b;
+}
+.contacts_form{
+    width: 80%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 200px;
+}
+.contacts_input{
+    display: flex;
+}
+.contacts_email{
+    width: 50%;
+    height: 72px;
+    background: #edf0f8;
+    margin-right: 30px;
+}
+.contacts_full_name{
+    width: 50%;
+    height: 72px;
+    background: #edf0f8;
+}
+.contacts_email,
+.contacts_full_name{
+    margin-bottom: 20px;
+    border: none;
+}
+.contacts_email::placeholder,
+.contacts_full_name::placeholder{
+    padding-left: 3%;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26.4px;
+    text-align: left;
+    color: #28292b;
+}
+.contacts_textarea{
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    margin-bottom: 50px;
+}
+.contacts_message{
+    width: 100%;
+    height: 130px;
+    padding: 12px 20px;
+    background-color: #edf0f8;
+    resize: none;
+    border: none;
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 26.4px;
+    text-align: left;
+    color: #28292b;
+    display: block;
+    margin: 0 auto;
+}
+.contacts_send{
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+}
+.contacts_button{
+    width: 162px;
+    height: 84px;
+    background: #f7941d;
+    border: none;
+    font-weight: normal;
+    font-size: 22.51px;
+    line-height: 5.14px;
+    color: #edf0f8;
+    transition: .2s;
+}
+.contacts_button:hover{
+    transform: scale(1.1);
+}
+/*Contacts style end*/
+
+/*Footer style start*/
+.footer{
+    height: 500px;
+    background: #375b75;
+    display: flex;
+}
+.footer_logo{
+    width: 50%;
+    display: block;
+    margin: 60px 0 0 10% ;
+}
+.footer_logo_pic{
+    margin-bottom: 35px;
+}
+.footer_social_links{
+    margin-left: 15%;
+}
+.footer_social_link{
+    margin-right: 30px;
+}
+.social_logo{
+    transition: .2s all;
+}
+.social_logo:hover{
+    transform: scale(1.1);
+}
+.footer_nav{
+    display: block;
+    margin-left: 10%;
+    margin-top: 10%;
+}
+.footer_ul{
+    display: block;
+}
+.footer_li{
+    margin-bottom: 15px;
+}
+.footer_li_link{
+    font-weight: normal;
+    font-size: 22px;
+    line-height: 7.7px;
+    text-align: left;
+    color: #fff;
+    transition: .2s all;
+}
+.footer_li_link:hover{
+    opacity: 0.7;
+}
+
+/*Footer style end*/
+
+
+@media (max-width: 1320px){
+    .container{
+        max-width: 1320px;
+        width: 100%;
+    }
+    .container_nav{
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .header_menu{
+        justify-content: space-between;
+        padding: 0 10% 0 5%;
+    }
+    .header_menu_logo{
+        margin-left: 2%;
+    }
+    .nav_ul{
+        float: right;
+        margin-right: 10%;
+    }
+    .nav_link{
+        font-size: 14px;
+        line-height: 14px;
+    }
+    .nav_li{
+        margin-right: 5%;
+    }
+    .intro_title_pic{
+        width: 100%;
+    }
+    .intro_logo{
+        width: 100%;
+    }
+    .mission{
+        margin: 70px 5% 100px 5%;
+    }
+    .mission_youtube{
+        bottom: auto;
+        right: auto;
+        margin: 0 auto;
+    }
+    .youtube_text{
+        font-size: 18px;
+        line-height: 22px;
+    }
+    .activities_info{
+        margin-left: 5%;
+    }
+    .activities_cards{
+        margin: 0 5% 50px 5%;
+    }
+}
+@media (max-width: 930px){
+    .container{
+        max-width: 930px;
+        width: 100%;
+    }
+    .container_nav{
+        max-width: 100%;
+        width: 100%;
+    }
+    .intro{
+        height: 600px;
+    }
+    .intro_title{
+        margin: 50px 0 0 30px;
+    }
+    .intro_title_pic{
+        width: 70%;
+    }
+    .intro_title_text{
+        width: 450px;
+        margin-left: 70px;
+    }
+    .title_text{
+        font-size: 23px;
+        line-height: 30px;
+        margin-bottom: 40px;
+    }
+    .intro_title_button{
+        margin-left: 70px;
+    }
+    .intro_button_1{
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
+        margin-right: 15px;
+    }
+    .donate_pic{
+        width: 20px;
+        margin: 0 15px;
+    }
+    .intro_button_2{
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
+    }
+    .email_input{
+        width: 300px;
+        height: 50px;
+    }
+    .email_input::placeholder{
+        font-size: 15px;
+    }
+    .intro_right_block{
+        height: 600px;
+    }
+    .right_join{
+        height: 50px;
+        font-size: 20px;
+    }
+    .mission{
+        margin: 50px 0 80px 10%;
+    }
+    .mission_title{
+        font-size: 30px;
+    }
+    .mission_text{
+        width: 90%;
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .mission_link{
+        font-size: 18px;
+    }
+    .mission_content_video{
+        width: 700px;
+    }
+    .youtube_text{
+        font-size: 18px;
+        line-height: 23px;
+    }
+    .donate{
+        height: 600px;
+    }
+    .donate_title_text{
+        padding: 50px 0 30px 0;
+    }
+    .donate_title{
+        font-size: 28px;
+    }
+    .donate_text{
+        font-size: 16px;
+        line-height: 28px;
+    }
+    .donate_email{
+        height: 50px;
+        margin-bottom: 10px;
+    }
+    .donate_email::placeholder{
+        font-size: 16px;
+        line-height: 20px;
+    }
+    .donate_email_button{
+        width: 150px;
+        height: 50px;
+    }
+    .fake{
+        width: 20px;
+        height: 20px;
+    }
+    .fake::before{
+        width: 110%;
+        height: 110%;
+    }
+    .label_usd{
+        font-size: 25px;
+        line-height: 22px;
+    }
+    .label_amd{
+        font-size: 25px;
+        line-height: 22px;
+    }
+    .choose_method{
+        width: 450px;
+        margin-bottom: 20px;
+    }
+    .activities_title_text{
+        font-size: 30px;
+    }
+    .activities_upcoming{
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .activities_past{
+        font-size: 22px;
+        line-height: 28px;
+    }
+    .activities_cards{
+        column-gap: 15px;
+    }
+    .activities_border{
+        width: 100px;
+        height: 100px;
+    }
+    .border_text{
+        font-size: 30px;
+        line-height: 30px;
+        padding: 15px;
+    }
+    .testimonials_title_1{
+        font-size: 30px;
+    }
+    .testimonials_cards{
+        column-gap: 10%;
+    }
+    .contacts_title{
+        font-size: 30px;
+    }
+    .contacts_input{
+        display: block;
+    }
+    .contacts_email,
+    .contacts_full_name{
+        width: 100%;
+    }
+    .contacts_button{
+        width: 150px;
+        height: 50px;
+        font-size: 18px;
+    }
+}
+@media (max-width: 770px){
+    .header__burger{
+        display: block;
+        margin-top: 3%;
+        margin-left: 75%;
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+    }
+    .header__burger{
+        width: 50px;
+        height: 30px;
+    }
+    .header_nav{
+        margin-left: 0;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 100%;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        background: rgb(0, 0, 0, 0.9);
+        z-index: 3;
+        padding: 55px;
+        transform: translateX(100%);
+    }
+    .nav__list_active{
+        transform: translateX(0);
+    }
+    .nav_ul{
+        
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        z-index: 4;
+    }
+    .header__nav-close{
+        width: 50px;
+        height: 40px;
+        position: absolute;
+        top: 7%;
+        right: 7%;
+        z-index: 11;
+    }
+    .header__nav-close-line{
+        display: block;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        top: 50%;
+        background-color: #fff;
+    }
+    .header__nav-close-line:first-child{
+        -webkit-transform: translateY(-50%) rotate(45deg);
+            -ms-transform: translateY(-50%) rotate(45deg);
+                transform: translateY(-50%) rotate(45deg);
+    }
+    .header__nav-close-line:last-child{
+        -webkit-transform: translateY(-50%) rotate(-45deg);
+            -ms-transform: translateY(-50%) rotate(-45deg);
+                transform: translateY(-50%) rotate(-45deg);
+    }
+    .intro_title_text{
+        width: 100%;
+        margin-left: 2%;
+    }
+    .intro_button_1{
+        margin-bottom: 10px;
+    }
+    .intro_title_button{
+        margin-left: 2%;
+    }
+    .activities_title{
+        margin-bottom: 40px;
+    }
+    .activities_info{
+        margin-left: 3%;
+    }
+    .activities_cards{
+        column-gap: 0;
+        row-gap: 40px;
+        margin-left: 3%;
+    }
+    .activities_card{
+        width: 100%;
+        grid-column: span 3;
+    }
+    .card_img{
+        max-width: 100%;
+    }
+    .donate{
+        width: 100%;
+    }
+    .donate_title{
+        font-size: 15px;
+    }
+    .donate_wrapper{
+        margin: 0 2%;
+    }
+    .donate_title_text{
+        text-align: left;
+    }
+    .donate_title{
+        font-size: 15px;
+        font-weight: bold;
+    }
+    .donate_form_checkbox{
+        margin-left: 2%;
+    }
+    .mission{
+        margin: 30px 2% 80px 2%;
+    }
+    .mission_content_video{
+        width: 100%;
+        height: 300px;
+    }
+    .mission_content_title_text{
+        display: block;
+        width: 100%;
+    }
+    .mission_wrapper{
+        padding: 20px;
+    }
+    .mission_content_title{
+        font-size: 15px;
+    }
+    .mission_content_text{
+        font-size: 12px;
+    }
+    .youtube_button{
+        width: 20px;
+    }
+    .donate_email{
+        width: 300px;
+    }
+    .choose_method{
+        width: 100%;
+    }
+}
