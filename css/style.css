@@ -526,11 +526,23 @@ a{
 }
 .header_right_block{
     width: 100%;
+    max-height: 87px;
+    height: 100%;
     top: 0;
     right: 0;
     grid-column: span 1;
     background: #f7941d;
     text-align: center;
+}
+.header_right_link{
+    margin: 30% auto;
+}
+.active_leng{
+    font-weight: bold;
+}
+.user_link{
+    font-size: 16px;
+    color: white;
 }
 .user_img{
     margin-top: 30px;
