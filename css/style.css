@@ -448,7 +448,7 @@ a{
     gap: 0;
 }
 .nav__list_active{
-    max-width: 61%;
+    max-width: 100%;
     width: 100%;
 }
 .header_active{
@@ -1531,6 +1531,8 @@ a{
         transform: translateX(100%);
     }
     .nav__list_active{
+        max-width: 770px;
+        width: 100%;
         transform: translateX(0);
     }
     .nav_ul{
@@ -1545,7 +1547,7 @@ a{
         height: 40px;
         position: absolute;
         top: 7%;
-        right: 7%;
+        right: 15%;
         z-index: 11;
     }
     .header__nav-close-line{
@@ -1641,5 +1643,9 @@ a{
     }
     .choose_method{
         width: 100%;
+    }
+    .footer_social_link{
+        display: block;
+        margin-bottom: 5px;
     }
 }
